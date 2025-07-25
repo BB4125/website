@@ -1,145 +1,201 @@
-<!DOCTYPE HTML>
-<!--
-	Introspect by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
---><html><head><title>Privacy Policy</title><meta charset="utf-8"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><link rel="stylesheet" href="main.css"></head><body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy - Navy Games</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --neon-blue: rgb(42, 100, 246);
+      --bg-dark: #0d0d0d;
+      --text-light: #f5f5f5;
+      --container-bg: rgb(21, 21, 21); /* koyu ama tamamen siyah olmayan şeffaf olmayan arkaplan */
+    }
 
-    <style>
-        body {
-            background-color: rgb(0, 81, 255);
-            color: #ffffff;
-            font-weight: bold;
-        }
-    
-        h1 {
-            color: #ffffff;
-        }
-    
-        h3 {
-            color: #ffffff;
-        }
-    
-        p {
-            color: #ffffff;
-        }
-    
-        p1 {
-            font-weight: bold;
-            color: #ffffff;
-        }
-    
-        p2 {
-            color: #ffffff;
-            text-decoration: none;
-        }
-    
-        a {
-            color: rgb(65, 255, 48);
-            font-weight: bold;
-        }
-    
-        .copyright {
-            background-color: rgb(28, 28, 28);
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        .copyright p1{
-        color: #ffffff;
-        font-weight: normal;
-        }
-    </style>
+    html, body {
+      height: 100%;
+      width: 100%;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
 
-<section id="main"><div class="inner">
+    /* Çizgili arkaplan */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image: 
+        linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 40px 40px;
+      z-index: 0;
+      pointer-events: none;
+      animation: moveGrid 60s linear infinite;
+    }
+
+    @keyframes moveGrid {
+      0% { background-position: 0 0, 0 0; }
+      100% { background-position: -40px -40px, -40px -40px; }
+    }
+
+    /* Container */
+    .container {
+      position: relative;
+      max-width: 900px;
+      margin: 80px auto 60px;
+      background-color: var(--container-bg);
+      border-radius: 15px;
+      padding: 40px 30px;
+      z-index: 1;
+    }
+
+    h1 {
+      font-weight: 700;
+      font-size: 36px;
+      margin-bottom: 24px;
+      color: var(--neon-blue);
+      user-select: none;
+    }
+
+    h3 {
+      font-weight: 600;
+      font-size: 20px;
+      margin-top: 30px;
+      margin-bottom: 12px;
+      color: var(--neon-blue);
+    }
+
+    p, li {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text-light);
+      margin-bottom: 12px;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    a {
+      color: var(--neon-blue);
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: var(--neon-blue);
+      text-decoration: underline;
+    }
+
+    /* Footer copyright */
+    .copyright {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px 10px;
+      font-size: 14px;
+      color: #777777;
+      user-select: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .container {
+        margin: 40px 15px 40px;
+        padding: 30px 20px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      h3 {
+        font-size: 18px;
+      }
+      p, li {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main" aria-label="Privacy Policy">
     <h1>Privacy Policy</h1>
-    <p><h3>Last Updated: May 17, 2025</h3>
-        <h3>Navy Oyun ve Yazilim Danismanlik Sanayi Ticaret Limited Sirketi</h3>
-        We at Navy Games(Navy Oyun ve Yazilim Danismanlik Sanayi Ticaret Limited Sirketi) respect your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, and share your data when you use our mobile games/applications and website (collectively referred to as the “Services”).
-        <br>
-        <br>
-        <p1>1. Data We Collect</p1>
-        <br>
-        <p2>We may collect the following types of information:</p2>
-        <br>
-        Device Information: IP address, device type, operating system, language, country, advertising ID (IDFA/GAID), and other technical identifiers.
-        <br>
-        Usage Data: Time spent in-game, level progress, in-app purchases, ads viewed, and gameplay behavior.
-        <br>
-        Support & Contact Info: If you contact us (e.g., via email or support form), we may collect your email address and any data you provide.
-        <br>
-        <br>
-        <p1>2. How We Use Your Data</p1>
-        <br>
-        <p2>We use your data to:</p2>
-        <br>
-        - Operate and improve our games and Services
-        <br>
-        - Analyze user behavior and game performance
-        <br>
-        - Show relevant ads and limit repetitive ones
-        <br>
-        - Respond to user inquiries and provide support
-        <br>
-        - Fulfill legal obligations
-        <br>
-        <br>
-        <p1>3. Third-Party Services</p1>
-        <br>
-        <p2>We may share limited data (such as your device ID or usage data) with trusted partners for analytics, advertising, and crash reporting. These partners may include:</p2>
-        <br>
-        - Google Analytics / Firebase
-        <br>
-        - Unity / IronSource / AppLovin / AdMob
-        <br>
-        - Apple / Google Play (for payments and updates)
-        <br>
-        These partners may use cookies, SDKs, or other technologies. <p2>Please refer to their privacy policies for more info.</p2>
-        <br>
-        <br>
-        <p1>3.1 In-App Purchases</p1>
-        <br>
-        <p2>All in-app purchases are processed securely through the Apple App Store or Google Play Store. We do not collect or store your name, credit card information, or billing address.
-        We only receive confirmation from the platform that a purchase has been completed, along with the type of item purchased, to deliver the content within the game.</p2>
-        <br>
-        <br>
-        <p1>4. Your Rights & Choices</p1>
-        <br>
-        <p2>You can opt out of personalized ads via your device settings:</p2>
-        <br>
-        - On iOS: Settings > Privacy > Advertising > Limit Ad Tracking
-        <br>
-        - On Android: Settings > Google > Ads > Opt out of Ads Personalization
-        <br>
-        You may request deletion of your personal data by contacting us at: <a href="mailto:info@navygamestudio.com">info@navygamestudio.com</a>
-        <br>
-        <br>
-        <p1>5. Data Retention</p1>
-        <br>
-        <p2>We store your data only as long as necessary to provide our Services, comply with legal obligations, or resolve disputes.</p2> Unused or unnecessary data is regularly deleted.
-        <br>
-        <br>
-        <p1>6. Security</p1>
-        <br>
-        <p2>We implement reasonable measures to protect your data but cannot guarantee complete security due to the nature of the internet and mobile platforms.</p2>
-        <br>
-        <br>
-        <p1>7. Children</p1>
-        <br>
-        Our Services are not intended for children under 13 (or under 16 in some regions). <p2>We do not knowingly collect data from children without parental consent.</p2>
-        <br>
-        <br>
-        <p1>8. Changes to This Policy</p1>
-        <br>
-        We may update this Privacy Policy from time to time. Changes will be posted on this page with the new “Last Updated” date. <p2>Continued use of our Services means you accept the changes.</p2>
-        <br>
-        <br>
-        <p1>9. Contact Us</p1>
-        <br>
-        If you have any questions about this Privacy Policy, please contact us at:
-        <br>
-        <p1>Email: </p1> <a href="mailto:info@navygamestudio.com">info@navygamestudio.com</a>
-        <br>
-        <p1>Website: </p1> <a href="https://navygamestudio.com">navygamestudio.com</a></p>
-</div>
-</section><div class="copyright">
-    <p1>© 2025 Navy Oyun ve Yazilim Danismanlik Sanayi Ticaret Limited Sirketi. All rights reserved.</p1>
-</div>
+
+    <h3>Last Updated: Jul 25, 2025</h3>
+    <p><strong>NAVY OYUN VE YAZILIM DANISMANLIK SANAYI TICARET LIMITED SIRKETI</strong></p>
+    <p>We (NAVY OYUN VE YAZILIM DANISMANLIK SANAYI TICARET LIMITED SIRKETI) respect your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, and share your data when you use our mobile games, applications, and website (collectively referred to as the “Services”).</p>
+
+    <h3>1. Data We Collect</h3>
+    <p>We may collect the following types of information:</p>
+    <ul>
+      <li>Device Information: IP address, device type, operating system, language, country, advertising ID (IDFA/GAID), and other technical identifiers.</li>
+      <li>Usage Data: Time spent in-game, level progress, in-app purchases, ads viewed, and gameplay behavior.</li>
+      <li>Support & Contact Info: If you contact us (e.g., via email or support form), we may collect your email address and any data you provide.</li>
+    </ul>
+
+    <h3>2. How We Use Your Data</h3>
+    <p>We use your data to:</p>
+    <ul>
+      <li>Operate and improve our games and Services</li>
+      <li>Analyze user behavior and game performance</li>
+      <li>Show relevant ads and limit repetitive ones</li>
+      <li>Respond to user inquiries and provide support</li>
+      <li>Fulfill legal obligations</li>
+    </ul>
+
+    <h3>3. Third-Party Services</h3>
+    <p>We may share limited data (such as your device ID or usage data) with trusted partners for analytics, advertising, and crash reporting.</p>
+    <p>Advertisement (advertisement networks)</p>
+    <ul>
+      <li>AppLovin Corporation - <a href="https://www.applovin.com/privacy/" target="_blank">Privacy Policy</a></li>
+      <li>Unity Technologies (Unity Ads) - <a href="https://unity3d.com/legal/privacy-policy" target="_blank">Privacy Policy</a></li>
+      <li>Mintegral - <a href="https://static.mintegral.com/document/privacy" target="_blank">Privacy Policy</a></li>
+      <li>Google LLC (Google Ads) - <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a></li>
+      <li>Vungle Inc. - <a href="http://vungle.com/privacy/" target="_blank">Privacy Policy</a></li>
+    </ul>
+    <p>These partners may use cookies, SDKs, or other technologies. Please refer to their privacy policies for more info.</p>
+
+    <h3>3.1. In-App Purchases</h3>
+    <p>All in-app purchases are processed securely through the Apple App Store or Google Play Store. We do not collect or store your name, credit card information, or billing address. We only receive confirmation from the platform that a purchase has been completed, along with the type of item purchased, to deliver the content within the game.</p>
+
+    <h3>4. Your Rights & Choices</h3>
+    <p>You can opt out of personalized ads via your device settings:</p>
+    <ul>
+      <li>On iOS: Settings > Privacy > Advertising > Limit Ad Tracking</li>
+      <li>On Android: Settings > Google > Ads > Opt out of Ads Personalization</li>
+    </ul>
+    <p>You may request deletion of your personal data by contacting us at: <a href="mailto:info@navygamestudio.com">info@navygamestudio.com</a></p>
+
+    <h3>5. Data Retention</h3>
+    <p>We store your data only as long as necessary to provide our Services, comply with legal obligations, or resolve disputes. Unused or unnecessary data is regularly deleted.</p>
+
+    <h3>6. Security</h3>
+    <p>We implement reasonable measures to protect your data but cannot guarantee complete security due to the nature of the internet and mobile platforms.</p>
+
+    <h3>7. Children</h3>
+    <p>Our Services are not intended for children under 13 (or under 16 in some regions). We do not knowingly collect data from children without parental consent.</p>
+
+    <h3>8. Changes to This Policy</h3>
+    <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with the new “Last Updated” date. Continued use of our Services means you accept the changes.</p>
+
+    <h3>9. Contact Us</h3>
+    <p>If you have any questions please contact us:</p>
+    <p>Email: <a href="mailto:info@navygamestudio.com">info@navygamestudio.com</a></p>
+    <p>Website: <a href="index.html" rel="noopener noreferrer">navygamestudio.com</a></p>
+  </div>
+
+  <div class="copyright" aria-label="Copyright Notice">
+    © 2025 Navy LTD. STI. All rights reserved.
+  </div>
+</body>
+</html>

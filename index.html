@@ -1,101 +1,274 @@
-<!DOCTYPE HTML>
-<!--
-	Introspect by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
---><html><head><title>Navy Games</title><meta charset="utf-8"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><link rel="stylesheet" href="main.css"></head><body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Navy Games</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --neon-blue: rgb(42, 100, 246);
+      --bg-dark: #0d0d0d;
+      --text-light: #f5f5f5;
+    }
 
-	<style>
-		body {
-			background-color: rgb(28, 28, 28);
-		}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-		#nav {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
+    html, body {
+      height: 100%;
+      width: 100%;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
 
-		#nav a {
-			margin: 0 15px; /* Linkler arasında boşluk bırakmak için */
-			text-decoration: none;
-			color: white; /* Linklerin rengini ayarlayın */
-			font-weight: bold;
-		}
+    .background-metrics {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 200%;
+      background-image: linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 40px 40px;
+      z-index: 0;
+      animation: moveGrid 60s linear infinite;
+      pointer-events: none;
+    }
 
-		section#banner {
-			background-color: rgb(0, 81, 255);
-		}
-		
-		section#banner h1 {
-			color: #ffffff;
-		}
+    @keyframes moveGrid {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(-40px, -40px); }
+    }
 
-		section#one {
-			background-color: #ffffff;
-		}
+    .logo {
+      position: absolute;
+      top: 32px;
+      left: 32px;
+      font-weight: 600;
+      font-size: 18px;
+      color: var(--neon-blue);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      z-index: 2;
+      user-select: none;
+    }
 
-		section#one h2 {
-			color: #041f48;
-		}
+    /* Container içeriği logodan aşağı başlasın */
+    .container {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start; /* üstten hizalama */
+      padding: 200px 20px 40px 20px; /* üstten boşluk (logonun altından başlasın) */
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      flex-direction: column;
+    }
 
-		section#one p {
-			color: #041f48;
-			font-weight: bold;
-			font-size: larger;
-		}
+    .content {
+      max-width: 680px;
+      margin-bottom: 60px;
+    }
 
-		section#one a {
-			color: rgb(255, 48, 48);
-			font-weight: bold;
-		}
+    h1 {
+      font-size: 52px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      line-height: 1.2;
+    }
 
-		section#footer {
-			background-color: rgb(0, 81, 255);
-		}
+    p {
+      font-size: 22px;
+      line-height: 1.7;
+      margin-bottom: 24px;
+      color: #999999;
+    }
 
-		section#footer h2{
-			color: #ffffff;
-		}
+    .button {
+      display: inline-block;
+      padding: 14px 28px;
+      font-size: 16px;
+      background-color: var(--neon-blue);
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 12px rgba(42, 100, 246, 0.6);
+      margin: 8px;
+    }
 
-		section#footer p{
-			color: #ffffff;
-			font-weight: bold;
-			font-size: larger;
-		}
+    .button:hover {
+      background-color: rgb(35, 85, 220);
+      box-shadow: 0 0 15px rgba(42, 100, 246, 0.8), 0 0 8px rgba(42, 100, 246, 0.5);
+    }
 
-		section#footer a{
-			color: rgb(65, 255, 48);
-			font-weight: bold;
-		}
+    .games-section {
+      width: 100%;
+      max-width: 1200px;
+      padding: 40px 20px;
+      margin-top: 40px;
+      z-index: 2;
+    }
 
-		.copyright {
-			background-color: rgb(28, 28, 28);
-		}
+    .games-section h2 {
+      font-size: 36px;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #ffffff;
+    }
 
-		.copyright p1{
-			color: #ffffff;
-			font-weight: normal;
-		}
-	</style>
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
 
-		<!-- Banner -->
-			<section id="banner"><div class="inner">
-					<h1>NAVY GAMES AND SOFTWARE <span><br>
-					Mobile game/application development.</span></h1>
-					</ul></div>
-			</section><!-- One --><section id="one"><div class="inner">
-					<header><h2>ABOUT US</h2>
-					</header><p>We were founded in 2025. We are developing and publishing mobile games in <a href="https://apps.apple.com/us/developer/navy-oyun-ve-yazilim-danismanlik-sanayi-ticaret-limited/id1816294303" target="_blank">App Store</a> and Goggle Play Store.</p>
-			</section><!-- Footer --><section id="footer"><div class="inner">
-					<header><h2>Contact Us</h2>
-					</header><p>If you have any questions, feedback, or support requests, contact us: <a href="mailto:info@navygamestudio.com">info@navygamestudio.com</a>
-					<br>
-					Our privacy policy: <a href="privacypolicy.html">Privacy Policy</a>
-					<br>
-					Our terms of use: <a href="termsofuse.html">Terms Of Use</a>
-					</p>
-				</div>
-			</section><div class="copyright">
-				<p1>© 2025 Navy Oyun ve Yazilim Danismanlik Sanayi Ticaret Limited Sirketi. All rights reserved.</p1>
-			</div>
+    .game-card {
+      background-color: #151515;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .game-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 12px rgba(42, 100, 246, 0.3);
+    }
+
+    /* Resimleri biraz küçült ve sabit yüksekliğe ayarla, oran korunsun */
+    .game-card img {
+      width: auto;
+      max-width: 100%;
+      height: 120px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      object-fit: contain;
+    }
+
+    .game-card h3 {
+      margin: 12px 0;
+      font-size: 20px;
+      color: #ffffff;
+    }
+
+    .game-card p {
+      font-size: 15px;
+      color: #999999;
+      margin-bottom: 16px;
+    }
+
+    .store-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .footer {
+      margin-top: 60px;
+      font-size: 14px;
+      color: #999999;
+      text-align: center;
+    }
+
+    .mail a{
+        font-size: 13px;
+        font-weight: bold;
+        color: var(--neon-blue);
+        margin: 0 12px;
+        text-decoration: none;
+    }
+
+    .mail a:hover {
+      text-decoration: underline;
+    }
+
+    .footer a {
+      color: var(--neon-blue);
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 36px;
+      }
+      p {
+        font-size: 16px;
+      }
+      .game-card img {
+        height: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="background-metrics"></div>
+
+  <div class="logo">Navy Games</div>
+
+  <div class="container">
+    <div class="content">
+      <h1>Developing & Publishing</h1>
+      <p>Focused on delivering consistent and high-quality mobile game experiences.</p>
+      <p>Developing and publishing engaging and accessible mobile games designed for long-lasting player enjoyment.</p>
+      <a class="button" href="mailto:info@navygamestudio.com">Contact Us</a>
+    </div>
+
+    <!-- OUR GAMES SECTION -->
+    <section class="games-section">
+      <h2>Our Games</h2>
+      <div class="games-grid">
+
+        <!-- Game Card 1 -->
+        <div class="game-card">
+          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/bd/a9/e2/bda9e21e-6584-57b3-f195-6b6713833ba9/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/460x0w.webp" alt="Game 1">
+          <h3>Hexa: Color Chaos!</h3>
+          <p>Casual & Puzzle</p>
+          <div class="store-buttons">
+            <a href="https://apps.apple.com/us/app/hexa-color-chaos/id6746575729" target="_blank" class="button">App Store</a>
+          </div>
+        </div>
+
+        <!-- Game Card 2 -->
+        <div class="game-card">
+          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/62/73/00/627300bf-ddf0-cb15-5a47-76573d07d834/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/460x0w.webp" alt="Game 2">
+          <h3>Pixel Gun Tycoon</h3>
+          <p>Simulation & Strategy</p>
+          <div class="store-buttons">
+            <a href="https://apps.apple.com/us/app/pixel-gun-tycoon/id6748413108" target="_blank" class="button">App Store</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <span>© 2025 Navy LTD. STI. All rights reserved.</span>
+      <br>
+      <br>
+      <a href="privacypolicy.html">Privacy Policy</a>
+      <a href="termsofuse.html">Terms of Use</a>
+      <br>
+      <br>
+    </div>
+    <div class="mail">
+      <a href="mailto:info@navygamestudio.com">info@navygamestudio.com</a>
+    </div>
+  </div>
+</body>
+</html>
