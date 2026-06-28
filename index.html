@@ -37,6 +37,17 @@
       @media (hover: none) {
         .game-card:active { transform: scale(0.98); }
       }
+
+      /* Hareketli RGB Animasyonu */
+      @keyframes rgb-move {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      .animate-rgb {
+        background-size: 300% 300%;
+        animation: rgb-move 4s linear infinite;
+      }
     </style>
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -75,33 +86,73 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                 
-                <div class="game-card rounded-2xl p-5 md:p-6 flex items-center gap-4 md:gap-5">
-                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/bd/a9/e2/bda9e21e-6584-57b3-f195-6b6713833ba9/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/460x0w.webp" 
-                         alt="Hexa" class="w-16 h-16 md:w-20 md:h-20 rounded-xl shadow-lg shrink-0" />
-                    <div class="flex-grow min-w-0">
-                        <h3 class="font-bold text-base md:text-lg text-white truncate">Hexa: Color Chaos!</h3>
-                        <p class="text-[10px] md:text-xs text-slate-500 mb-3 md:mb-4 uppercase tracking-wider">Casual & Puzzle</p>
-                        <div class="flex items-center gap-2">
-                            <a href="https://apps.apple.com/us/app/hexa-color-chaos/id6746575729" target="_blank" class="shrink-0 hover:scale-105 transition-transform duration-200">
-                                <img src="appstore.svg" alt="Download on the App Store" class="h-8 md:h-10 w-auto object-contain" />
-                            </a>
+                <!-- Hexa Card -->
+                <div class="relative game-card rounded-2xl p-5 md:p-6 flex items-center justify-between gap-4 md:gap-5 cursor-pointer">
+                    <!-- Main Link Cover -->
+                    <a href="hexacolorchaos.html" class="absolute inset-0 z-10 rounded-2xl"></a>
+                    
+                    <div class="flex items-center gap-4 md:gap-5 min-w-0 flex-grow">
+                        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/bd/a9/e2/bda9e21e-6584-57b3-f195-6b6713833ba9/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/460x0w.webp" 
+                             alt="Hexa" class="w-16 h-16 md:w-20 md:h-20 rounded-xl shadow-lg shrink-0" />
+                        <div class="min-w-0">
+                            <h3 class="font-bold text-base md:text-lg text-white truncate">Hexa: Color Chaos!</h3>
+                            <p class="text-[10px] md:text-xs text-[#FFDE00] font-semibold mb-3 uppercase tracking-wider">Casual & Puzzle</p>
+                            <div class="flex items-center gap-2 relative z-20">
+                                <a href="https://apps.apple.com/us/app/hexa-color-chaos/id6746575729" target="_blank" class="shrink-0 hover:scale-105 transition-transform duration-200">
+                                    <img src="appstore.svg" alt="Download on the App Store" class="h-9 md:h-10 w-auto object-contain" />
+                                </a>
+                            </div>
                         </div>
+                    </div>
+                    <div class="shrink-0 flex items-center justify-center p-3 mb-20 bg-white/5 text-white rounded-xl transition-all duration-300 shadow-md pointer-events-none">
+                        <i data-lucide="external-link" class="w-5 h-5"></i>
                     </div>
                 </div>
 
-                <div class="game-card rounded-2xl p-5 md:p-6 flex items-center gap-4 md:gap-5">
-                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/62/73/00/627300bf-ddf0-cb15-5a47-76573d07d834/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/460x0w.webp" 
-                         alt="Pixel Gun" class="w-16 h-16 md:w-20 md:h-20 rounded-xl shadow-lg shrink-0" />
-                    <div class="flex-grow min-w-0">
-                        <h3 class="font-bold text-base md:text-lg text-white truncate">Pixel Gun Tycoon</h3>
-                        <p class="text-[10px] md:text-xs text-slate-500 mb-3 md:mb-4 uppercase tracking-wider">Simulation & Strategy</p>
-                        <div class="flex items-center gap-2">
-                            <a href="https://apps.apple.com/us/app/pixel-gun-tycoon/id6748413108" target="_blank" class="shrink-0 hover:scale-105 transition-transform duration-200">
-                                <img src="appstore.svg" alt="Download on the App Store" class="h-8 md:h-10 w-auto object-contain" />
-                            </a>
-                            <a href="https://play.google.com/store/apps/details?id=com.navygamestudio.guntycoon&hl=en" target="_blank" class="shrink-0 hover:scale-105 transition-transform duration-200">
-                                <img src="googleplay.svg" alt="Get it on Google Play" class="h-8 md:h-10 w-auto object-contain" />
-                            </a>
+                <!-- Pixel Gun Card -->
+                <div class="relative game-card rounded-2xl ps-5 pe-3 md:ps-6 md:pe-4 flex items-center justify-between gap-4 md:gap-5 cursor-pointer">
+                    <!-- Main Link Cover -->
+                    <a href="pixelguntycoon.html" class="absolute inset-0 z-10 rounded-2xl"></a>
+                    
+                    <div class="flex items-center gap-4 md:gap-5 min-w-0 flex-grow">
+                        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/62/73/00/627300bf-ddf0-cb15-5a47-76573d07d834/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/460x0w.webp" 
+                             alt="Pixel Gun" class="w-16 h-16 md:w-20 md:h-20 rounded-xl shadow-lg shrink-0" />
+                        <div class="min-w-0">
+                            <h3 class="font-bold text-base md:text-lg text-white truncate">Pixel Gun Tycoon</h3>
+                            <p class="text-[10px] md:text-xs text-[#FFDE00] font-semibold mb-3 uppercase tracking-wider">Simulation & Strategy</p>
+                            <div class="flex items-center gap-2 relative z-20">
+                                <a href="https://apps.apple.com/us/app/pixel-gun-tycoon/id6748413108" target="_blank" class="shrink-0 hover:scale-105 transition-transform duration-200">
+                                    <img src="appstore.svg" alt="Download on the App Store" class="h-9 md:h-10 w-auto object-contain" />
+                                </a>
+                                <a href="https://play.google.com/store/apps/details?id=com.navygamestudio.guntycoon&hl=en" target="_blank" class="shrink-0 hover:scale-105 transition-transform duration-200">
+                                    <img src="googleplay.svg" alt="Get it on Google Play" class="h-9 md:h-10 w-auto object-contain" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shrink-0 flex items-center justify-center p-3 mb-20 bg-white/5 text-white rounded-xl transition-all duration-300 shadow-md pointer-events-none md:-me-1">
+                        <i data-lucide="external-link" class="w-5 h-5"></i>
+                    </div>
+                </div>
+
+                <!-- Chameleon Guys Card (Thicker Moving Rainbow RGB Border - No Blue Glow) -->
+                <div class="relative animate-rgb rounded-2xl p-[2px] flex items-center justify-between opacity-95 cursor-not-allowed select-none bg-gradient-to-r from-blue-600 via-sky-400 via-blue-500 via-cyan-400 to-blue-600 transition-transform duration-200 hover:-translate-y-[3px]">
+                    <div class="w-full h-full bg-[#15181E] rounded-[14px] p-5 md:p-6 flex items-center justify-between gap-4 md:gap-5">
+                        <div class="flex items-center gap-4 md:gap-5 min-w-0 flex-grow">
+                            <div class="w-16 h-16 md:w-20 md:h-20 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-slate-400 font-extrabold text-2xl md:text-3xl shrink-0 shadow-lg">
+                                ?
+                            </div>
+                            <div class="min-w-0 flex-grow">
+                                <h3 class="font-bold text-base md:text-lg text-slate-300 truncate">Chameleon Guys</h3>
+                                <p class="text-[10px] md:text-xs text-[#FFDE00] font-semibold mb-3 uppercase tracking-wider">Casual & Puzzle</p>
+                                <div class="flex items-center justify-center gap-2 text-sm font-bold text-emerald-400 tracking-wide uppercase bg-emerald-500/10 py-1.5 rounded-lg border border-emerald-500/20">
+                                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                                    Coming in July
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shrink-0 flex items-center justify-center p-3 mb-20 bg-white/5 text-slate-400 rounded-xl shadow-md">
+                            <i data-lucide="lock" class="w-5 h-5"></i>
                         </div>
                     </div>
                 </div>
@@ -112,7 +163,7 @@
     </main>
 
     <footer class="mt-12 md:mt-20 py-8 md:py-10 border-t border-white/5 text-center px-6">
-        <p class="text-[10px] md:text-xs text-slate-600 mb-4 tracking-wide">© 2026 Navy Oyun Ve Yazılım Ltd. Şti.</p>
+        <p class="text-[10px] md:text-xs text-slate-600 mb-4 tracking-wide">© 2026 Navy Oyun Ve Yazılım Ltd. Sti.</p>
         <div class="flex justify-center gap-6">
             <a href="./privacypolicy.html" class="text-xs text-slate-500 hover:text-white transition-colors">Privacy Policy</a>
             <a href="./termsofuse.html" class="text-xs text-slate-500 hover:text-white transition-colors">Terms of Use</a>
