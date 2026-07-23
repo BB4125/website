@@ -1102,3 +1102,6 @@ admanmedia.com, 34, RESELLER
 visiblemeasures.com, 1009, RESELLER
 video.unrulymedia.com, 2979066401945419350, RESELLER
 auxoads.com, 12125, RESELLER
+
+#META AUDIENCE NETWORK
+facebook.com, 1784776076221713, DIRECT, c3e20eee3f780d68
